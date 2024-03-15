@@ -4,9 +4,9 @@ const app = express();
 app.use(cors());
 
 let data = {
-    "name": "John",
-    "age": 30,
-    "city": "New York"
+    "name": "Mason",
+    "age": 10,
+    "city": "Kansas City",
 }
 
 app.listen(3000, () => {
