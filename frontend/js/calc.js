@@ -18,8 +18,8 @@ function fetchTestAll() {
     .then((json) => console.log(json));
 }
 
-function fetchTest() { 
-    fetch('https://golfyplayz-github-io-benq.onrender.com/test')
+function fetchTest(id) { 
+    fetch('https://golfyplayz-github-io-benq.onrender.com/test/' + id)
     .then((response) => response.text())
     .then((text) => console.log(text));
 }
@@ -72,6 +72,6 @@ submit.addEventListener('click', (event) => {
         outputAmnt.remove();
         header.remove();
     }
-    fetchTest();
+    fetchTest(stockInt.value);
     fetchTestAll();
 })
