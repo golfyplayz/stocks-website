@@ -20,5 +20,5 @@ app.get('/', (req, res) => {
 
 app.get('/test', (req, res) => {
     console.log('get test data');
-    res.send(data.john);
+    res.send(data.name);
 });
