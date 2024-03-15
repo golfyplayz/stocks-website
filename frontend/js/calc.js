@@ -13,13 +13,13 @@ const calculate = (inital, final, amount) => {
 }
 
 function fetchTestAll() { 
-    fetch('https://stock-backend-v5a6.onrender.com/')
+    fetch('https://golfyplayz-github-io-benq.onrender.com/')
     .then((response) => response.json())
     .then((json) => console.log(json));
 }
 
 function fetchTest() { 
-    fetch('https://stock-backend-v5a6.onrender.com/test')
+    fetch('https://golfyplayz-github-io-benq.onrender.com/test')
     .then((response) => response.text())
     .then((text) => console.log(text));
 }
