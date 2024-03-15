@@ -14,7 +14,6 @@ const calculate = (inital, final, amount) => {
 
 function fetchTest() { 
     fetch('https://stock-backend-v5a6.onrender.com/')
-    .then((response) => response.json())
     .then((json) => console.log(json));
 }
 
