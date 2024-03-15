@@ -18,7 +18,7 @@ function fetchTestAll() {
     .then((json) => console.log(json));
 }
 
-function fetchTestAll() { 
+function fetchTest() { 
     fetch('https://stock-backend-v5a6.onrender.com/test')
     .then((response) => response.text());
 }
