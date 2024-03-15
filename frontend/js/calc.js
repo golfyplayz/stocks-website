@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 const submit = document.getElementById('submit');
 const stockInt = document.getElementById('stockInt');
 const stockFin = document.getElementById('stockFin');
