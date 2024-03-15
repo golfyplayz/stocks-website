@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 const submit = document.getElementById('submit');
 const stockInt = document.getElementById('stockInt');
 const stockFin = document.getElementById('stockFin');
@@ -12,10 +14,15 @@ const calculate = (inital, final, amount) => {
     return result;
 }
 
-function fetchTest() { 
+function fetchTestAll() { 
     fetch('https://stock-backend-v5a6.onrender.com/')
     .then((response) => response.json())
     .then((json) => console.log(json));
+}
+
+function fetchTestAll() { 
+    fetch('https://stock-backend-v5a6.onrender.com/test')
+    .then((response) => response.text());
 }
 
 const checkIfShouldRemove = () => {
@@ -67,4 +74,5 @@ submit.addEventListener('click', (event) => {
         header.remove();
     }
     fetchTest();
+    fetchTestAll();
 })
