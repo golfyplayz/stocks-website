@@ -26,10 +26,8 @@ function fetchTest(id) {
 
 const checkIfShouldRemove = () => {
     if(stockInt.value==='' || stockFin.value==='' || stockAmt.value==='') {
-        console.log('true');
         return true;
     } else {
-        console.log('false');
         return false;
     }
 
@@ -41,11 +39,9 @@ submit.addEventListener('click', (event) => {
     let fin = document.getElementById('stockFin').value;
     let amnt = document.getElementById('stockAmt').value;
     let total = calculate(init, fin, amnt).toFixed(2).toString();
-    console.log(total);
     if(!checkIfShouldRemove()) {
         event.preventDefault();
         if(!document.getElementById('outputHeader') && !document.getElementById('outputAmnt')) {
-        console.log('clear');
         header = document.createElement('h1');
         outputDiv.appendChild(header);
         header.id = 'outputHeader'
@@ -66,7 +62,6 @@ submit.addEventListener('click', (event) => {
         }
     }
     else {
-        console.log('div');
         let header = document.getElementById('outputHeader');
         let outputAmnt = document.getElementById('outputAmnt');
         outputAmnt.remove();
