@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { calcFuncs } from './App';
+const {App, Output} = calcFuncs;
 
 const submit = document.getElementById('submit');
 submit.addEventListener('click', Calculate);
@@ -9,7 +10,7 @@ submit.addEventListener('click', Calculate);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <calcFuncs.App />
+    <App />
   </React.StrictMode>
 );
 
@@ -20,8 +21,7 @@ function Calculate() {
   let amount = (stockFin - stockInt) * stockAmt;
   root.render(
     <React.StrictMode>
-      <calcFuncs.App />
-      <calcFuncs.output amount={amount} />
+      <Output amount={amount} />
     </React.StrictMode>
   )
 }
