@@ -15,13 +15,15 @@ nav .nav {
     list-style-type: none;
     align-items: center;
     padding-left: 0;
-    margin: 0;
+    margin: 1%;
+    width: 50%;
 }
 
 .nav .links {
-    padding: 0 10%;
+    padding: 0;
     display: flex;
     width: 100%;
+    margin: 5%;
 }
 
 .nav .links a {
@@ -32,18 +34,20 @@ nav .nav {
 
 nav .acct {
     display: flex;
-    justify-content: right;
     list-style-type: none;
     align-items: center;
-    padding-left: auto;
-    margin-right: 0;
-    margin: 0;
+    justify-content: right;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 1%;
+    width: 50%;
 }
 
 .acct .links {
-    padding: 0 10%;
     display: flex;
     width: 100%;
+    margin: 7%;
+    justify-content: right;
 }
 
 .acct .links a {
@@ -52,6 +56,11 @@ nav .acct {
     font-size: 120%;
 }
 
+.acct .links a i {
+    justify-content: right;
+    width: 100%;
+    height: auto;
+}
 
 body {
     margin: 0;
