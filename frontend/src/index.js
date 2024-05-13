@@ -26,6 +26,11 @@ function App() {
             <li className="links" id="leader"><a href="./"><i class="fa-solid fa-bars fa-lg"></i></a></li>
           </ul>
         </nav>
+        <div className="body">
+          <div className="info"></div>
+          <div className="leader"></div>
+          <div className="stocks"></div>
+        </div>
       </div>
   );} else {
     return (
@@ -42,7 +47,6 @@ function App() {
       </ul>
     </nav>
     <div className="body">
-      
       <div className="stocks"></div>
       <div className="info"></div>
       <div className="leader"></div>
