@@ -1,7 +1,7 @@
 import React from "react";
 
-function NavBar(width) {
-  if (width < 700) {
+function NavBar(props) {
+  if (props.width < 900) {
     return (
       <nav>
         <ul className="nav">
@@ -15,7 +15,7 @@ function NavBar(width) {
         <ul className="menu">
           <li className="links" id="leader">
             <a href="./">
-              <i class="fa-solid fa-bars fa-lg"></i>
+              <i className="fa-solid fa-bars fa-lg"></i>
             </a>
           </li>
         </ul>

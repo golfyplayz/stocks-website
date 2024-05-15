@@ -14,7 +14,7 @@ function Home() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  if (width < 800) {
+  if (width < 900) {
     return (
       <div id='main'>
         <NavBar width={width} />
