@@ -1,11 +1,11 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import width from '../components/width';
 import '../home.css';
 import NavBar from '../components/nav';
 import Welcome from '../components/welcome';
 
 function Home() {
-  const [width, setWidth] = useState(window.innerWidth);
+  /* const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -14,7 +14,7 @@ function Home() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, []); */
   if (width < 900) {
     return (
       <div id='main'>
