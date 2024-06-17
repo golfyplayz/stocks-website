@@ -6,16 +6,6 @@ import Welcome from '../components/welcome';
 import useWindowWidth from '../components/width';
 
 function Home() {
-  /* const [width, setWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); */
   const width = useWindowWidth();
   if (width < 900) {
     return (
