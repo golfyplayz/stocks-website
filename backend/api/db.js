@@ -1,12 +1,8 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  // Your database connection details
-  user: 'jackson',
-  host: 'dpg-cq43c608fa8c73fjo9j0-a',
-  database: 'stocks_7x0r',
-  password: 'QxCiqThJWtitCtXSydc4jV9TD9WZPe6l',
-  port: 5432,
+  // Corrected property name from 'connectionsString' to 'connectionString'
+  connectionString: 'postgresql://jackson:QxCiqThJWtitCtXSydc4jV9TD9WZPe6l@dpg-cq43c608fa8c73fjo9j0-a/stocks_7x0r',
 });
 
 module.exports = pool;
@@ -27,6 +23,6 @@ async function createTables() {
     } finally {
       client.release(); // Release the client back to the pool
     }
-  }
+}
 
-  module.exports.createTables = createTables;
+module.exports.createTables = createTables;
