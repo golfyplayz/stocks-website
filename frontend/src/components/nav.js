@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
 function NavBar(props) {
+  // State to control the visibility of the dropdown menu
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => setIsDropdownVisible(!isDropdownVisible);
+
+  //render navbar
   if (props.width < 900) {
     return (
       <nav>
@@ -41,10 +47,17 @@ function NavBar(props) {
           </li>
         </ul>
         <ul className="acct">
-          <li className="links" id="acct">
+          <li className="links" id="acct" onMouseDown={toggleDropdown}>
             <a href="./">
               <i className="fa-solid fa-user fa-lg"></i>
             </a>
+            {isDropdownVisible && (
+            <ul className="dropdown">
+              <li><a href="./profile">Profile</a></li>
+              <li><a href="./settings">Settings</a></li>
+              <li><a href="./logout">Logout</a></li>
+            </ul>
+          )}
           </li>
         </ul>
       </nav>

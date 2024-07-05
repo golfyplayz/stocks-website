@@ -1,28 +1,28 @@
 const { Pool } = require('pg');
+const fs = require('fs');
 
 const pool = new Pool({
-  // Corrected property name from 'connectionsString' to 'connectionString'
-  connectionString: 'postgresql://jackson:QxCiqThJWtitCtXSydc4jV9TD9WZPe6l@dpg-cq43c608fa8c73fjo9j0-a/stocks_7x0r',
+  connectionString: 'postgresql://jackson:QxCiqThJWtitCtXSydc4jV9TD9WZPe6l@dpg-cq43c608fa8c73fjo9j0-a.ohio-postgres.render.com/stocks_7x0r',
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
-module.exports = pool;
 
-async function createTables() {
-    const client = await pool.connect();
+async function getUser(id) {
     try {
-      const result = await client.query(`
-        CREATE TABLE IF NOT EXISTS users (
-          id SERIAL PRIMARY KEY,
-          name VARCHAR(100),
-          email VARCHAR(150) UNIQUE NOT NULL
-        )
-      `);
-      console.log('Table is successfully created');
+        const queryText = 'SELECT * FROM users WHERE id = $1;';
+        const res = await pool.query(queryText, [id]);
+        if (res.rows.length > 0) {
+            return res.rows[0]; // Return the user if found
+        } else {
+            return null; // Return null if no user is found with the given ID
+        }
     } catch (err) {
-      console.error('Error creating table:', err);
-    } finally {
-      client.release(); // Release the client back to the pool
+        console.error('Error fetching user:', err);
+        throw err; // Rethrow the error to be handled by the caller
     }
 }
 
-module.exports.createTables = createTables;
+
+module.exports = { pool, getUser };
