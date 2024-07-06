@@ -70,31 +70,20 @@
     /*fix this idioic code*/
     /*i guess it works now*/
     nav .acct {
-      display: inline-block;
-        list-style-type: none;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        padding-left: 0;
-        padding-right: 0;
-        margin: 1%;
-        margin-left: auto;
-        margin-right: 3%;
-        height: auto;
+      justify-content: center;
+      align-content: center;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
-    .acct .links {
-        display: flex;
-        width: 100%;
-        margin: 7%;
-        justify-content: right;
-    }
 
     .acct .links a {
         color: white;
         text-decoration: none;
         font-size: calc(1vw + .75em);
         font-family: Roboto;
+        justify-content: center;
+        align-content: center;
     }
 
     .acct .links a i {
@@ -104,17 +93,17 @@
     }
 
     .acct > .links#acct {
-      position: relative; /* This makes it the reference point for its absolutely positioned children */
+      position: relative;
     }
 
     .dropdown {
       position: absolute;
-      top: 100%; /* Positions the dropdown right below the parent element */
-      right: 0; /* Aligns the dropdown's left edge with the parent's left edge */
-      width: auto; /* Adjust as necessary */
-      background-color: white; /* Example background color */
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
-      z-index: 1; /* Ensures the dropdown appears on top of other content */
+      top: 100%;
+      right: 0;
+      width: auto;
+      background-color: white;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
     }
 
     .dropdown li a {
@@ -124,7 +113,9 @@
       display: block;
     }
 
-    .dropdown li a:hover {background-color: #f1f1f1}
+    .dropdown li a:hover {
+      background-color: #f1f1f1;
+    }
   }
 
 @media (min-width: 1200px){}
