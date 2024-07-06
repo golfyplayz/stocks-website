@@ -1,0 +1,270 @@
+@media (min-width: 900px) {
+    nav {
+        display: flex;
+        background-color: #222634;
+        width: 100%;
+        height: 7%;
+    }
+
+    nav .nav {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        padding-left: 0;
+        margin: 0;
+        margin-left: 1%;
+        width: 50%;
+    }
+
+    .nav #leader, #calc, #lookup {
+        padding: 0;
+        display: flex;
+        width: auto;
+        height: 100%;
+        margin: 0 3% 0 3%;
+    }
+
+    .nav #home {
+        padding: 0;
+        display: flex;
+        width: auto;
+        font-size: 100%;
+        margin-right: 3%;
+        margin-left: 2%;
+    }
+
+    .nav .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #leader a {
+        color: white;
+        width: auto;
+        height: auto;
+        text-decoration: none;
+        font-size: calc(1vw + 1em);
+    }
+    #calc a {
+        color: white;
+        width: auto;
+        height: auto;
+        text-decoration: none;
+        font-size: calc(1vw + 1em);
+    }
+    #lookup a {
+        color: white;
+        width: auto;
+        height: auto;
+        text-decoration: none;
+        font-size: calc(1vw + 1em);
+    }
+    #home a {
+        color: white;
+        width: auto;
+        height: auto;
+        text-decoration: none;
+        font-size: calc(1vw + .5em);
+    }
+    /*fix this idioic code*/
+    /*i guess it works now*/
+    nav .acct {
+      display: inline-block;
+        list-style-type: none;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 1%;
+        margin-left: auto;
+        margin-right: 3%;
+        height: auto;
+    }
+
+    .acct .links {
+        display: flex;
+        width: 100%;
+        margin: 7%;
+        justify-content: right;
+    }
+
+    .acct .links a {
+        color: white;
+        text-decoration: none;
+        font-size: calc(1vw + .75em);
+        font-family: Roboto;
+    }
+
+    .acct .links a i {
+        justify-content: right;
+        width: 100%;
+        height: auto;
+    }
+
+    .acct > .links#acct {
+      position: relative; /* This makes it the reference point for its absolutely positioned children */
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%; /* Positions the dropdown right below the parent element */
+      right: 0; /* Aligns the dropdown's left edge with the parent's left edge */
+      width: auto; /* Adjust as necessary */
+      background-color: white; /* Example background color */
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+      z-index: 1; /* Ensures the dropdown appears on top of other content */
+    }
+
+    .dropdown li a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown li a:hover {background-color: #f1f1f1}
+  }
+
+@media (min-width: 1200px){}
+
+@media (max-width: 900px) {
+    nav {
+      display: flex;
+      background-color: #222634;
+      width: 100%;
+      height: 7%;
+    }
+  
+    nav .nav {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      padding-left: 0;
+      margin: 1%;
+      width: 50%;
+    }
+  
+    nav .nav, nav .user, nav .menu {
+      width: 33%;
+    }
+  
+    .nav #home {
+      padding: 0;
+      display: flex;
+      width: auto;
+      margin-right: 3%;
+      margin-left: 2%;
+    }
+  
+    .nav .links a {
+      color: white;
+      text-decoration: none;
+    }
+  
+    nav .user {
+      height: auto;
+      margin: auto;
+      text-align: center;
+      justify-items: center;
+      color: white;
+      font-size: 150%;
+      font: Poppins;
+    }
+  
+    .menu {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      justify-content: right;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 1%;
+      width: 50%;
+    }
+  
+    .menu .links {
+      display: flex;
+      width: 100%;
+      margin: 7%;
+      justify-content: right;
+      color: white;
+    }
+  
+    .menu .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 120%;
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+      display: flex;
+      background-color: #222634;
+      width: 100%;
+      height: 7%;
+    }
+  
+    nav .nav {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      padding-left: 0;
+      margin: 1%;
+      width: 50%;
+    }
+  
+    nav .nav, nav .user, nav .menu {
+      width: 33%;
+    }
+  
+    .nav #home {
+      padding: 0;
+      display: flex;
+      width: auto;
+      margin-right: 3%;
+      margin-left: 2%;
+    }
+  
+    .nav .links a {
+      color: white;
+      text-decoration: none;
+    }
+  
+    nav .user {
+      height: auto;
+      margin: auto;
+      text-align: center;
+      justify-items: center;
+      color: white;
+      font-size: 100%;
+      font: Poppins;
+    }
+  
+    .menu {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      justify-content: right;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 1%;
+      width: 50%;
+    }
+  
+    .menu .links {
+      display: flex;
+      width: 100%;
+      margin: 7%;
+      justify-content: right;
+      color: white;
+    }
+  
+    .menu .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 120%;
+    }
+  }

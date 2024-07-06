@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import './css/nav.css';
 
 function NavBar(props) {
   // State to control the visibility of the dropdown menu

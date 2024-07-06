@@ -1,6 +1,6 @@
 import React from 'react';
 import '../components/width';
-import '../home.css';
+import './css/home.css';
 import NavBar from '../components/nav';
 import Welcome from '../components/welcome';
 import useWindowWidth from '../components/width';
