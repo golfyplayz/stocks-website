@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 const fs = require('fs');
 
 const pool = new Pool({
-    connectionString: 'postgresql://admin:VH9bKep2ukNS2v4NumzNDiCx85AhMLta@dpg-cr4f26tsvqrc73avj100-a/stocks_kvmk',
+    connectionString: 'postgresql://admin:VH9bKep2ukNS2v4NumzNDiCx85AhMLta@dpg-cr4f26tsvqrc73avj100-a.ohio-postgres.render.com/stocks_kvmk',
     ssl: {
         rejectUnauthorized: false,
     },
@@ -10,7 +10,7 @@ const pool = new Pool({
 
 async function getUser(id) {
     try {
-        const queryText = 'SELECT * FROM users WHERE id = $1;';
+        const queryText = 'SELECT * FROM userinfo WHERE userid = $1;';
         const res = await pool.query(queryText, [id]);
         if (res.rows.length > 0) {
             return res.rows[0]; // Return the user if found
