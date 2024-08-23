@@ -17,20 +17,22 @@ function Home() {
           <div className="stocks"></div>
         </div>
       </div>
-  );} else {
+    );
+  } else {
     return (
-    <div id='main'>
-    <NavBar width={width} />
-    <div className="body">
-      <div className='welcome'><Welcome /></div>
-      <div className='container'>
-        <div className="stocks"></div>
-        <div className="info"></div>
-        <div className="leader"></div>
+      <div id='main'>
+        <NavBar width={width} />
+        <div className="body">
+          <div className='welcome'><Welcome /></div>
+          <div className='container'>
+            <div className="stocks"></div>
+            <div className="info"></div>
+            <div className="leader"></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  )}
+    );
+  }
 }
 
 export default Home;

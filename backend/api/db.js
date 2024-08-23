@@ -2,12 +2,11 @@ const { Pool } = require('pg');
 const fs = require('fs');
 
 const pool = new Pool({
-  connectionString: 'postgresql://jackson:QxCiqThJWtitCtXSydc4jV9TD9WZPe6l@dpg-cq43c608fa8c73fjo9j0-a.ohio-postgres.render.com/stocks_7x0r',
-  ssl: {
-    rejectUnauthorized: false,
-  },
+    connectionString: 'postgresql://admin:VH9bKep2ukNS2v4NumzNDiCx85AhMLta@dpg-cr4f26tsvqrc73avj100-a/stocks_kvmk',
+    ssl: {
+        rejectUnauthorized: false,
+    },
 });
-
 
 async function getUser(id) {
     try {
@@ -23,6 +22,5 @@ async function getUser(id) {
         throw err; // Rethrow the error to be handled by the caller
     }
 }
-
 
 module.exports = { pool, getUser };

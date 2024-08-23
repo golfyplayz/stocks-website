@@ -14,6 +14,6 @@ app.listen(port, () => {
 });
 
 getUser(1)
-        .then(user => {
-            console.log(user); // Log the user object
-        })
+    .then(user => {
+        console.log(user); // Log the user object
+    })

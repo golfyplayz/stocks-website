@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import './css/nav.css';
 
+
 function NavBar(props) {
-  // State to control the visibility of the dropdown menu
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-
   const toggleDropdown = () => setIsDropdownVisible(!isDropdownVisible);
-
   //render navbar
   if (props.width < 900) {
     return (
@@ -53,12 +51,12 @@ function NavBar(props) {
               <i className="fa-solid fa-user fa-lg"></i>
             </a>
             {isDropdownVisible && (
-            <ul className="dropdown">
-              <li><a href="./profile">Profile</a></li>
-              <li><a href="./settings">Settings</a></li>
-              <li><a href="./logout">Logout</a></li>
-            </ul>
-          )}
+              <ul className="dropdown">
+                <li><a href="./profile">Profile</a></li>
+                <li><a href="./settings">Settings</a></li>
+                <li><a href="./logout">Logout</a></li>
+              </ul>
+            )}
           </li>
         </ul>
       </nav>
