@@ -29,6 +29,19 @@ app.delete('/purge', async (req, res) => {
     }
 });
 
+app.delete('/purge/all', async (req, res) => {
+    let dateNow = Date.now();
+    let purgeDate = dateNow;
+    try {
+        const queryText = 'DELETE FROM calculations WHERE date < $1';
+        await pool.query(queryText, [purgeDate]);
+        res.status(200).json({ message: 'Old data purged' });
+    } catch (err) {
+        console.error('Error purging old data:', err);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
 
 
 app.post('/data', async (req, res) => {
