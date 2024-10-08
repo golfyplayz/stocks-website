@@ -62,7 +62,7 @@ submit.addEventListener('click', async (event) => {
         }
     }
     const data = { init, fin, amnt, name, total };
-    const url = 'https://stocks-backend-qnju.onrender.com';
+    const url = 'https://stocks-backend-qnju.onrender.com/data';
     try {
         const result = await postData(url, data);
         console.log('Success:', result);
