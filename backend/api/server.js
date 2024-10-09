@@ -12,8 +12,31 @@ const pool = new Pool({
     },
 });
 
-app.listen(8383, () => {
-    console.log('Server is running on port 8383');
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+
+app.get('/data/all', async (req, res) => {
+    try {
+        const queryText = 'SELECT * FROM calculations';
+        const result = await pool.query(queryText);
+        res.status(200).json({ message: "Data retrieved", result: result.rows });
+    } catch (err) {
+        console.error('Error getting data:', err);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
+app.get('/data/:name', async (req, res) => {
+    const name = req.params.name;
+    try {
+        const queryText = 'SELECT * FROM calculations WHERE name = $1';
+        const result = await pool.query(queryText, [name]);
+        res.status(200).json({ message: "Data retrieved", result: result.rows });
+    } catch (err) {
+        console.error('Error getting data:', err);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
 });
 
 app.delete('/purge', async (req, res) => {
