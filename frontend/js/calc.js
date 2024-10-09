@@ -13,7 +13,7 @@ const calculate = (initial, final, amount) => {
 }
 
 const checkIfShouldRemove = () => {
-    if(stockInt.value === '' || stockFin.value === '' || stockAmt.value === '') {
+    if (stockInt.value === '' || stockFin.value === '' || stockAmt.value === '') {
         return true;
     } else {
         return false;
@@ -39,9 +39,9 @@ submit.addEventListener('click', async (event) => {
     let name = document.getElementById('name').value;
     let total = calculate(init, fin, amnt).toFixed(2).toString();
 
-    if(!checkIfShouldRemove()) {
+    if (!checkIfShouldRemove()) {
         event.preventDefault();
-        if(!document.getElementById('outputHeader') && !document.getElementById('outputAmnt')) {
+        if (!document.getElementById('outputHeader') && !document.getElementById('outputAmnt')) {
             header = document.createElement('h1');
             outputDiv.appendChild(header);
             header.id = 'outputHeader';
@@ -49,7 +49,7 @@ submit.addEventListener('click', async (event) => {
             outputDiv.appendChild(outputAmnt);
             outputAmnt.id = 'outputAmnt';
         }
-        if(total >= 0) {
+        if (total >= 0) {
             header.innerHTML = 'Money made';
         } else {
             header.innerHTML = 'Money lost';
@@ -62,7 +62,7 @@ submit.addEventListener('click', async (event) => {
         }
     }
     const data = { init, fin, amnt, name, total };
-    const url = 'https://stocks-backend-qnju.onrender.com/data';
+    const url = 'https://www.api.verdoornstocks.net/data';
     try {
         const result = await postData(url, data);
         console.log('Success:', result);
